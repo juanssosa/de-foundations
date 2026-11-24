@@ -1,0 +1,18 @@
+[
+  {
+    "cedula": "00123",
+    "nombre": "Ana Muñoz",
+    "conceptos": [
+      {"codigo": "001", "descripcion": "Salario", "valor": 3500000},
+      {"codigo": "050", "descripcion": "Horas extra", "valor": 125000.50}
+    ]
+  },
+  {
+    "cedula": "45678",
+    "nombre": "Carlos Pérez",
+    "conceptos": [
+      {"codigo": "001", "descripcion": "Salario", "valor": 4200000},
+      {"codigo": "060", "descripcion": "Bonificación", "valor": 300000.25}
+    ]
+  }
+]

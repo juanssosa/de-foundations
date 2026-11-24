@@ -14,5 +14,9 @@
       {"codigo": "001", "descripcion": "Salario", "valor": 4200000},
       {"codigo": "060", "descripcion": "Bonificación", "valor": 300000.25}
     ]
+  },
+    {
+    "cedula": "00981",
+    "nombre": "Lucía Gómez"
   }
 ]

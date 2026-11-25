@@ -5,7 +5,6 @@ import sys
 
 def leer_empleados(ruta):
     """Lee el archivo JSON y devuelve la lista de empleados."""
-    ruta = sys.argv[1] if len(sys.argv) > 1 else "data/empleados.json"
     with open(ruta, encoding="utf-8") as archivo:
        emp = json.load(archivo, parse_float=Decimal)
     return emp
@@ -28,13 +27,14 @@ def total_empleado(empleado):
 
 
 def main():
+    ruta = sys.argv[1] if len(sys.argv) > 1 else "data/empleados.json"
     try:
-       empleados = leer_empleados("data/empleados.json")
+       empleados = leer_empleados(ruta)
     except FileNotFoundError:
        print("El archivo no existe")
        sys.exit(1)
-    except json.JSONDecodeError:
-       print("El archivo existe, pero el JSON está mal formado")
+    except json.JSONDecodeError as e:
+       print(f"El archivo existe, pero el JSON está mal formado. Error: {e}")
        sys.exit(1)
     total_nomina = Decimal("0")
     for empleado in empleados:
